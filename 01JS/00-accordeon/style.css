@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+}
+
+.container
+{
+    margin-top: 50px;
+    width: 450px;
+    margin: 50px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img {
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.accordeon .title:nth-child(even) {
+    background-color: #696666;
+    color: aqua;
+}
+
+#menuItem {
+    padding-bottom: 5px;
+}
+
+.accordeonPoint {
+    /* color: #e7e7e7; */
+    color: #696666;
+    background-color: #e7e7e7;
+    border-radius: 30px;
+    margin-bottom: 5px;
+    transition: all 1s ease-in-out;
+
+}
+
+.accordeonPoint .title {
+    font-weight: 700;
+    color: #696666;
+    padding: 12px 22px;
+    border-radius: 30px;
+    
+    
+}
+
+.accordeonPoint.open .title {
+    background-color: #ff8663;
+    color: #fff;
+}
+
+.accordeonPoint ul {
+    display: none;
+    font-weight: 400;
+    list-style: none;
+    padding-left: 22px;
+    padding-bottom: 13px;
+    margin-bottom: 5px;
+    transition: height 0.3s ease-in-out;
+}
+
+.accordeonPoint ul li {
+    line-height: 26px;
+}
+
+.accordeonPoint.open ul {
+  display: block;
+}
+
+.accordeonPoint .title::after {
+  content: '▶ ';
+  color:  #ff8663;
+  float: right;
+}
+
+.accordeonPoint.open .title::after {
+  content: '▼ ';
+  color: #fff;
+  float: right;
+}
